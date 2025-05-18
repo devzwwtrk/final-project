@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack a mole</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="start-screen" class="screen">
+        <h1>Whack a mole</h1>
+        <button id="start-btn">Start game</button>
+    </div>
+
+        <!-- Game board -->
+    <div id="game-container" class="hidden">
+        <div id="grid"></div>
+        <div id="info">
+            <div id="lives">❤️❤️❤️</div>
+            <div id="timer">Time: 00:00</div>
+        </div>
+    </div>
+
+        <!-- Pop-up 'Game Over' -->
+    <div id="game-over" class="screen hidden">
+        <div class="popup">
+            <h2>Game Over</h2>
+            <p id="final-time"></p>
+            <button id="restart-btn">Start over</button>
+        </div>
+    </div>
+
+        <!-- Sound elements -->
+    <audio id="hitSound" src="assets/hit.wav" preload="auto"></audio>
+    <audio id="missSound" src="assets/miss.wav" preload="auto"></audio>
+    <audio id="gameOverSound" src="assets/gameover.wav" preload="auto"></audio>
+    <audio id="hitHeartSound" src="assets/hitHeart.wav" preload="auto"></audio>
+    <audio id="missHeartSound" src="assets/missHeart.wav" preload="auto"></audio>
+</body>
+</html>

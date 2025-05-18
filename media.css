@@ -1,0 +1,197 @@
+       /* Memory game*/
+/* 📱 Маленькие экраны: телефоны */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 10px;
+    }
+
+    #game-board {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        max-width: 100%;
+    }
+
+    .card {
+        width: 60px;
+        height: 60px;
+        font-size: 1em;
+    }
+
+    #start-btn, #close-modal {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    #timer {
+        font-size: 16px;
+    }
+
+    .modal-content {
+        padding: 15px;
+    }
+
+    .modal-content h2 {
+        font-size: 20px;
+    }
+
+    .modal-content p {
+        font-size: 16px;
+    }
+}
+
+/* 💊 Средние экраны: планшеты */
+@media (min-width: 601px) and (max-width: 1024px) {
+    #game-board {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+    }
+
+    .card {
+        width: 70px;
+        height: 70px;
+        font-size: 1.1em;
+    }
+}
+
+
+
+       /* Сайт-визитка*/
+/* Для планшетов и экранов до 768px */
+@media (max-width: 768px) {
+
+  body {
+    padding-top: 20px;
+  }
+  .container {
+    width: 90%;
+    border-width: 5px;
+  }
+
+  header {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .title-block,
+  .userpic {
+    width: 100%;
+    height: 100px;
+    margin: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li a {
+    border-right: none;
+    border-bottom: 1px solid rgb(209, 203, 203);
+    justify-content: center;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .content,
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* Для телефонов до 480px */
+@media (max-width: 480px) {
+  .title-block {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  nav li a {
+    padding: 15px;
+    font-size: 0.9em;
+  }
+
+  #toggle-button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+
+  .footer-logo {
+    font-size: 1.2em;
+  }
+
+  .social-btn img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+        /*whack a mole*/
+/* Медиа-запрос для планшетов */
+  @media (max-width: 768px) {
+    .cell {
+      width: 70px;
+      height: 70px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  
+    #info {
+      font-size: 1em;
+    }
+  
+    #lives {
+      font-size: 1.2em;
+    }
+  
+    #game-container {
+      max-width: 90vw;
+    }
+  }
+  
+  /* Медиа-запрос для телефонов */
+  @media (max-width: 480px) {
+    .cell {
+      width: 55px;
+      height: 55px;
+    }
+  
+    button {
+      font-size: 12px;
+      padding: 8px 16px;
+    }
+  
+    .screen {
+      padding: 15px;
+    }
+  
+    #info {
+      font-size: 0.9em;
+    }
+  
+    #lives {
+      font-size: 1em;
+    }
+  
+    #grid {
+      gap: 6px;
+    }
+  }

@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Luckiest+Guy&display=swap');
+
+
+body {
+    font-family: "Luckiest Guy", "Arial", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.game-box {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+
+    background-color: cadetblue;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+}
+
+label, input, button {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+input {
+    margin: 10px auto;
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    display: block;
+    padding: 10px 15px;
+    background-color: #45A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+button:hover {
+    background-color: rgb(50, 63, 126);
+}
+
+button:active {
+    opacity: 0.7;
+}
+
+p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#hint {
+    color: #8a2be2;
+    border-radius: 5%;
+}
+
+
+.hidden {
+    display: none;
+}
+
+#new-game {
+    margin: 10px auto;
+    padding: 10px 15px;
+    background-color: gray;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.15s ease;
+}
+
+#new-game:hover {
+    transform: scale(1.1);
+}   
+
+#new-game:active {
+    opacity: .7;
+}

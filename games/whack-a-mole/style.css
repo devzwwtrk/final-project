@@ -1,0 +1,236 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #075a7d, #86fdff);
+    min-height: 100vh;
+    color: #322;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+
+        /* Game Container */
+#game-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+        /* Start Screen and Game Over */
+.screen {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.hidden {
+    opacity: 0;
+    display: none;
+}
+
+        /* Button style */
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff8e53, #ff6b6b);
+    transform: scale(1.1);
+}
+
+        /* Grid */
+#grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Change here */
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+        /* Perfect Cells */
+.cell {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(145deg, #ffffff, #dad5d5);
+    border: 3px solid #3136ba;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+}
+
+        /* Images in cells */
+.cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+        /* lives */
+#lives {
+    color: #d11515;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+        /* info-block */
+#info {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+        /* Animations */
+    /* Mole and heart popping in animations  */
+@keyframes mole-spawn {
+    from {
+        opacity: 0.2;
+        transform: translateY(100%) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%) scale(1);
+    }
+}
+
+@keyframes heart-spawn {
+    0% {
+        opacity: 0.5;
+        transform: scale(0.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.mole {
+    animation: mole-spawn 0.25s ease-in-out;
+}
+
+.heart {
+    animation: heart-spawn 0.25s ease;
+}
+
+        /* Heart twinkle animation */
+@keyframes blinkAnimation {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+.blink {
+    animation: blinkAnimation 0.3s ease-in-out 3;
+}
+
+        /* Mole disappear without hit */
+@keyframes mole-hide {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(100%); }
+}
+
+.mole-hide {
+    animation: mole-hide 0.25s ease-in-out forwards;
+}
+
+        /* Mole hit animation */
+@keyframes mole-hit {
+    0% { transform: scale(1); opacity: 1; }
+    30% { transform: scale(0.6) rotate(90deg); opacity: .7;}
+    60% { transform: scale(0.3) rotate(180deg); opacity: .5; }
+    80% { transform: scale(0.1) rotate(360deg); opacity: .3; }
+    100% { transform: scale(0) rotate(720deg); opacity: 0; }
+}
+
+.mole-hit {
+    animation: mole-hit 0.3s ease-in-out forwards;
+}
+
+        /* Heart disappear without hit animation */
+@keyframes heart-blink {
+    0%, 100% { opacity: .2; transform: (.5); }
+    50% { opacity: 1; transform: scale(1); }
+}
+
+.hear-blink {
+    animation: heart-blink 0.5s ease-in-out forwards;
+}
+        /* Heart click animation */
+@keyframes heart-glow {
+    0%, 50%, 80% {filter: brightness(1); transform: scale(1);}
+    30%, 70%, 100% { filter: brightness(2); transform: scale(.8);}
+}
+
+.heart-glow {
+    animation: heart-glow 0.5s ease-in-out forwards;
+}
+
+        /* for tablets */
+ @media (max-width: 768px) {
+    .cell {
+      width: 70px;
+      height: 70px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  
+    #info {
+      font-size: 1em;
+    }
+  
+    #lives {
+      font-size: 1.2em;
+    }
+  
+    #game-container {
+      max-width: 90vw;
+    }
+  }
+  
+  /* Медиа-запрос для телефонов */
+  @media (max-width: 480px) {
+    .cell {
+      width: 55px;
+      height: 55px;
+    }
+  
+    button {
+      font-size: 12px;
+      padding: 8px 16px;
+    }
+  
+    .screen {
+      padding: 15px;
+    }
+  
+    #info {
+      font-size: 0.9em;
+    }
+  
+    #lives {
+      font-size: 1em;
+    }
+  
+    #grid {
+      gap: 6px;
+    }
+  } 

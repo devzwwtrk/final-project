@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Inter Tight", 'Arial', serif;
+    font-weight: 500;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    background: url(../images/bg.png);
+    padding-top: 100px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.container {
+    background: white;
+    margin: 0 auto;
+    width: 800px;
+    min-height: 500px;
+}
+
+header {
+    display: flex;
+    height: 150px;
+}
+
+.title-block {
+    position: relative;
+    display: flex;
+    width: 80%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    color: white;
+    background: url(../images/title.png) no-repeat center center / cover;
+}
+
+.title-block:after {
+    content: '';
+    position: absolute;
+    background: black;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.title {
+    z-index: 1;
+    font-weight: 600;
+}
+
+.user-pic {
+    display: flex;
+    width: 20%;
+    height: 100%;
+    background: url(../images/mraz.jpg) no-repeat center center / cover;
+}
+
+nav ul {
+    display: flex;
+    margin: 10px 0;
+    background-color: rgb(202, 193, 190);
+}
+
+nav li a {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(87, 82, 82);
+    font-weight: bold;
+    border-right: 3px solid rgb(209, 203, 203);
+    padding: 20px;
+    transition: background 0.3s ease;
+}
+
+nav li a:hover {
+    background-color: rgba(165, 160, 159, 0.912);
+}
+
+.content-wrapper {
+    display: flex;
+}
+
+.content {
+    width: 70%;
+    padding: 20px;
+}
+
+.side-bar {
+    width: 30%;
+    padding: 20px;
+}
+
+.content p {
+    line-height: 20px;
+}
+
+.side-bar li a {
+    display: inline-block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.10s ease;
+}
+
+.side-bar li a:hover {
+    transform: translateX(10px);
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    min-width: 1200px;
+    background-color: #010122;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-wrapper {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.footer-contact {
+    font-size: 1 em;
+}
+
+.footer-contact p {
+    margin: 5px;
+}
+
+.footer-social {
+    display: flex;
+    margin: 15px;
+    gap: 5px;
+}
+
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.footer-copy {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.social-btn img {
+    width: 30px;
+    height: 30px;
+    background: none;
+    transition: all .3s ease;
+}
+
+.social-btn:hover img {
+    transform: scale(1.2);
+    opacity: .8;
+}
+
+      /* Сайт-визитка*/
+/* Для планшетов и экранов до 768px */
+@media (max-width: 768px) {
+
+  body {
+    padding-top: 20px;
+  }
+  .container {
+    width: 90%;
+    border-width: 5px;
+  }
+
+  header {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .title-block,
+  .userpic {
+    width: 100%;
+    height: 100px;
+    margin: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li a {
+    border-right: none;
+    border-bottom: 1px solid rgb(209, 203, 203);
+    justify-content: center;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .content,
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* Для телефонов до 480px */
+@media (max-width: 480px) {
+  .title-block {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  nav li a {
+    padding: 15px;
+    font-size: 0.9em;
+  }
+
+  #toggle-button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+
+  .footer-logo {
+    font-size: 1.2em;
+  }
+
+  .social-btn img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+#happy-choice {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    transition: color 0.15s;
+}
+
+#happy-choice:hover {
+    color: #1f62d6;
+}
