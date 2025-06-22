@@ -20,13 +20,18 @@
     border: 2px solid #555;
     background-color: #000;
   }
-  #score {
-    text-align: center;
-    margin-bottom: 10px;
-    font-family: 'Press Start 2P', monospace;
-    color: #0f0;
-    font-size: 14px;
-  }
+.scoreboard {
+  position: fixed;
+  width: 100%;
+  top: 10px;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0, 40;
+  font-size: 24px;
+  color: #0F0;
+
+}
   #overlay {
     position: absolute;
     top: 0;

@@ -22,6 +22,7 @@ h3 {
     margin: 0 auto;
     width: 800px;
     min-height: 500px;
+    border: 10px solid white;
 }
 
 header {
@@ -96,6 +97,10 @@ nav li a:hover {
 .side-bar {
     width: 30%;
     padding: 20px;
+}
+
+.side-bar ul {
+  margin-bottom: 10px;
 }
 
 .content p {

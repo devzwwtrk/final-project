@@ -11,6 +11,18 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 80vh;
+    flex-direction: column;
+}
+
+#record {
+    color: #333;
+    font-size: 2rem;
+    text-shadow: 0 0 20px rgba(184, 183, 183, 0.3);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 20px;
 }
 
 .container {
@@ -21,6 +33,9 @@ h1 {
     font-size: 2rem;
     color: #333;
     font-weight: bold;
+    text-shadow: 0 0 20px rgba(184, 183, 183, 0.3);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
 }
 
 .game-box {
