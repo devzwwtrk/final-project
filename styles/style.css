@@ -9,6 +9,7 @@ body {
 
     background: url(../images/bg.png);
     padding-top: 100px;
+    touch-action: none;
 }
 
 h3 {
