@@ -166,7 +166,6 @@ function collision(head, tail) {
 
 document.addEventListener('keydown', (e)=> {
     const dir = snake.direction;
-    alert(event.key + event.code)
     if (!gameRunning && e.code == 'Space') {
         startGame();
     }
