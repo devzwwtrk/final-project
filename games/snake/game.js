@@ -129,11 +129,11 @@ board.addEventListener('touchstart', e=> {
 
 board.addEventListener('touchend', e => {
     const endTouch = e.changedTouches[0];
-    const swipeX = touch.startX = endTouch.clientX; 
-    const swipeY = touch.startY = endTouch.clientY;
+    const swipeX = touch.startX - endTouch.clientX; 
+    const swipeY = touch.startY - endTouch.clientY;
 
     if (Math.abs(swipeX) > Math.abs(swipeY)) {
-        if (swipeX > 20) simulateKey('ArrowLeft');
+        if (swipeX > 20) simulateKey('ArrowLeft')
         else if (swipeX < -20) simulateKey('ArrowRight');
     } else {
         if (swipeY > 20) simulateKey('ArrowUp');
@@ -175,19 +175,19 @@ document.addEventListener('keydown', (e)=> {
     if ((e.key == 'ArrowLeft' || e.key == 'a') && dir.dx != 1) {
         dir.dx = -1;
         dir.dy = 0;
-        directionChamged = true
+        directionChamged = true;
     } else if ((e.key == 'ArrowRight' || e.key == 'd') && dir.dx != -1) {
         dir.dx = 1;
         dir.dy = 0;
-        directionChamged = true
+        directionChamged = true;
     } else if ((e.key == 'ArrowDown' || e.key == 's') && dir.dy != -1) {
         dir.dx = 0;
         dir.dy = 1;
-        directionChamged = true
+        directionChamged = true;
     } else if ((e.key == 'ArrowUp' || e.key == 'w') && dir.dy != 1) {
         dir.dx = 0;
         dir.dy = -1;
-        directionChamged = true
+        directionChamged = true;
     }
 });
 
