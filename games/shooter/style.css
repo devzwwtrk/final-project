@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;    
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Press Start 2P', monospace;
+    background-color: black;
+}
+
+.score-container {
+    color: #fff;
+    font-size: 1.5em;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.overlay {
+    background-color: #fff;
+    min-width: 400px;
+    min-height: 150px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 35px;
+}
+
+.game-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h1 {
+    font-weight: bold;
+    font-size: 4em;
+}
+
+p {
+    font-size: 0.9em;
+    color: #6f6f6f;
+}
+
+button {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    background-color: #53cff9;
+    border: none;
+    border-radius: 40px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 900) {
+    .overlay {
+        min-width: 280px;
+    }
+
+    .score-container {
+        font-size: 0.9em;
+    }
+}
