@@ -222,8 +222,8 @@ function animate() {
 
 }
 
-window.addEventListener('click', (e)=> {
-    const angle = Math.atan2(e.clientY - player.y, e.clientX - player.x);
+function shoot(x, y) {
+    const angle = Math.atan2(y - player.y, x - player.x);
     const velocity = {
         x: Math.cos(angle),
         y: Math.sin(angle)
@@ -231,10 +231,19 @@ window.addEventListener('click', (e)=> {
     projectiles.push(new Projectile(
         player.x,
         player.y,
-        7,
+        5,
         '#fff',
         velocity
     ));
+}
+
+window.addEventListener('click', (e)=> {
+    shoot(e.clientX, e.clientY);
+});
+
+window.addEventListener('touchstart', (e)=>{
+    const touch = e.touches[0];
+    shoot(touch.clientX, touch.clientY);
 });
 
 
